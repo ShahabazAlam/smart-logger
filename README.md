@@ -33,7 +33,7 @@ It provides **UUID-based logs**, **date/parent_folder structured logs**, **datab
 ## Installation
 
 ```bash
-pip install smart-logger
+pip install az-smart-logger
 ```
 
 ---
