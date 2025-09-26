@@ -38,6 +38,56 @@ pip install smart-logger
 
 ---
 
+## Quick Setup (Step by Step)
+
+1. **Generate default config file**
+
+   ```bash
+   smart-logger make-smart-logger-default-conf
+   ```
+
+   → This creates a config file in your project folder.
+
+2. **Update config file**
+
+   * Add your **database credentials**, **log paths**, and other settings.
+
+3. **Set the configuration**
+
+   ```bash
+   smart-logger set_config
+   ```
+
+4. **Verify active configuration**
+
+   ```bash
+   smart-logger show_config
+   ```
+
+   → Ensures everything is correctly set.
+
+5. **Initialize database tables**
+
+   ```bash
+   smart-logger init-db
+   ```
+
+6. **Create an admin user**
+
+   ```bash
+   smart-logger create-admin-user
+   ```
+
+7. **Run the Smart Logger Dashboard UI**
+
+   ```bash
+   smart-logger ui --host 127.0.0.1 --port 8000
+   ```
+
+✅ Now your logging system with UI is ready!
+
+---
+
 ## Usage
 
 ### 1. FastAPI Example
@@ -211,7 +261,6 @@ logger.debug("Debugging message")
 
 * **Real-time log view**
 * **Filter by:** date, time, UUID, log type
-* **Download:** CSV, JSON
 * **Charts:**
 
   * Daily/Monthly/Yearly error insights
@@ -230,8 +279,9 @@ MIT License. See LICENSE file for details.
 
 ✅ **Key Points:**
 
-1. **Clear instructions** for installation and usage.
-2. **Examples for FastAPI, Flask, Django** included.
-3. **CLI instructions** for UI and DB initialization.
-4. **Folder structure overview** for developers.
-5. **Ready for PyPI** and GitHub documentation.
+1. **Step-by-step setup guide** added.
+2. **Clear instructions** for installation and usage.
+3. **Examples for FastAPI, Flask, Django** included.
+4. **CLI instructions** for UI and DB initialization.
+5. **Folder structure overview** for developers.
+6. **Ready for PyPI** and GitHub documentation.
