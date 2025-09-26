@@ -36,13 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const start = startTime.value;
         const end = endTime.value;
 
+          // 1️⃣ Start time cannot be greater than end time
         if (start && end && start > end) {
             return alert("Start time cannot be greater than End time");
         }
-
-        if (!logDate.value || !start || !end && !uuid) return alert("Date and time range are mandatory");
-        if (!logDate.value || !start || !end) {
-            if(!uuid) return alert("Select at least one file or provide UUID");
+        
+        // 2️⃣ Mandatory fields check
+        if (!logDate || !start || !end || selectedFiles.length === 0) {
+            return alert("Date, time range, and at least one file selection are mandatory");
         }
 
 
